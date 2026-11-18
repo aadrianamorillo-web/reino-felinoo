@@ -1,0 +1,26 @@
+Proyecto: Reino Felino
+
+DEFINICIÓN DEL PROYECTO (antes de usar la IA)
+1. Nombre de la aplicación: Reino Felino
+2. De qué trata: un sitio informativo sobre felinos (león, tigre, guepardo, gato doméstico y puma). Muestra aspecto, hábitos, alimentación y estilo de vida de cada uno, con datos separados para machos y hembras.
+3. Páginas: Inicio (tarjetas con imagen de cada felino), Felinos (ficha completa de cada uno) y Nosotros (objetivo del sitio y tecnologías usadas).
+4. Lista de datos: una lista de 5 diccionarios en Python, uno por felino, con nombre, categoría, descripción, imagen, aspecto, hábitos, alimentación, estilo de vida, macho y hembra.
+
+
+PROMPT 1 — Estructura inicial
+Estoy haciendo un proyecto de la asignatura Pensamiento Computacional y Programación. Debo crear una aplicación web sencilla con Python y Flask que sea un sitio informativo sobre felinos. Todavía no quiero el código completo: explícame cómo organizar la carpeta del proyecto. Necesito un archivo app.py, una carpeta templates con tres páginas HTML (index.html, felinos.html y nosotros.html), una carpeta static/css con styles.css y una carpeta static/img para las fotos. Muéstrame el árbol de carpetas y explícame para qué sirve cada archivo.
+
+PROMPT 2 — Rutas
+Ya tengo la estructura del proyecto con app.py, templates y static. Ahora necesito que en app.py me ayudes a crear tres rutas con @app.route: la de inicio "/", una llamada "/felinos" y otra llamada "/nosotros". Cada ruta debe devolver una página con render_template(). Por ahora las páginas pueden estar casi vacías. Agrega comentarios que expliquen qué hace cada ruta, porque tengo que poder explicarlas.
+
+PROMPT 3 — Páginas HTML
+Tengo las tres rutas funcionando en app.py. Ahora quiero crear index.html, felinos.html y nosotros.html dentro de la carpeta templates. Necesito que las tres tengan un menú de navegación con enlaces a las otras páginas y que usen una plantilla base.html con herencia de Jinja para no repetir el menú. Usa url_for() para los enlaces. En Nosotros quiero explicar el objetivo del sitio, y en Inicio una portada con un botón que lleve a Felinos.
+
+PROMPT 4 — Datos
+Mi sitio trata sobre cinco felinos: león, tigre, guepardo, gato doméstico y puma. En app.py necesito una lista de Python con un diccionario por cada felino. Cada diccionario debe tener nombre, categoría, descripción, imagen (ruta dentro de static/img), aspecto, hábitos, alimentación, estilo de vida, y un texto distinto para el macho y otro para la hembra. Después envía la lista a index.html y felinos.html con render_template(). En las plantillas muéstrala con un ciclo {% for %} y variables {{ }} de Jinja. Explícame cómo funciona el ciclo línea por línea.
+
+PROMPT 5 — Diseño
+Ya se muestran los datos en las tres páginas, pero se ven sin estilo. Necesito el archivo static/css/styles.css, enlazado desde base.html con url_for('static', filename=...). Quiero colores verdes oscuros con un acento ámbar, el menú arriba con la página actual resaltada, las tarjetas del inicio en una cuadrícula con la imagen arriba, y en las fichas los textos del macho y de la hembra en dos recuadros de distinto color. No uses Bootstrap ni JavaScript. Que se vea bien también en pantallas pequeñas.
+
+PROMPT 6 — Revisión y corrección
+Ejecuté la aplicación con "python app.py" y la probé en el navegador. Las páginas cargan, pero quiero revisar tres cosas: que todas las imágenes se vean (la del tigre tenía extensión .jfif), que los enlaces del menú y los botones funcionen entre las tres páginas, y que no haya errores en la terminal. Dime cómo comprobar cada punto y qué corregir si algo falla. Si hay algún error, explícame primero qué significa antes de darme la solución.
